@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Corporate_Performance_Analyzer.Main" %>
+<!--This page creates a common header, footer, and navigation bar for all the pages in the website-->
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+	<meta charset="UTF-8">
+	<title>Corporate Performance Analyzer</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Signika:600,400,300' rel='stylesheet' type='text/css'>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="style-headers.css" rel="stylesheet" type="text/css" media="screen">
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<link href="style-ie.css" rel="stylesheet" type="text/css" media="screen">
+	<![endif]-->
+</head>
+<body class="home">
+	<div class="root">
+        <div>
+			<!--Header-->
+			<header class="h7 sticky-enabled no-topbar">
+				<section class="top"><!--Grey bar on top can be used to display information--></section>
+		
+				<section class="main-header">
+					<!--Website Logo-->
+					<p class="title">
+						<a href="./"><img src="~/images/temp/logo-n.jpg" alt="Corporate Performance Analyzer" width="400" runat="server" ></a> 
+						<span>Get the full picture on your business</span>
+					</p> <!--Logo links back to default home page-->
+					<!--End of Website Logo-->
+
+					<!--Navigation bar leads to all pages of the site-->
+					<nav class="mainmenu">
+						<!--for full screen resolution -->
+						<ul>
+							<li><a href="Default.aspx">Home</a></li>					
+							<li><a href="Statements.aspx">Statements</a></li>
+							<li><a href="CreateRatio.aspx">Ratios</a></li>
+							<li><a href="ObjectCreation.aspx">Knowledge</a>
+								<ul>
+									<li><a href="ObjectCreation.aspx">Object Creation</a></li>
+									<li><a href="PredicateCreation.aspx">Predicate Creation</a></li>
+								</ul>					
+							</li>					
+							<li><a href="AddArticle.aspx">Text</a></li>
+							<li><a href="Analysis.aspx">Analysis</a></li>
+						</ul>
+						<!--end of nav for full screen-->
+						
+						<!--for smaller screen resolution-->
+						<select id="sec-nav" name="sec-nav">
+							<option value="#">Main Menu</option>
+							<option value="Default.aspx">Home</option>
+							<option value="Statements.aspx">Statements</option>
+							<option value="CreateRatio.aspx">Ratios</option>
+							<option value="ObjectCreation.aspx">Knowledge</option>
+								<option value="ObjectCreation.aspx">- Object Creation</option>
+								<option value="PredicateCreation.aspx">- Predicate Creation</option>
+							<option value="AddArticle.aspx">Text</option>
+							<option value="Analysis.aspx">Analysis</option>	
+						</select>
+						<!--end of nav for smaller screen-->				
+					</nav>
+					<div class="clear"></div>
+				</section>
+			</header>
+			<!--End of Header-->
+        </div>
+		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+		<!--Footer-->
+		<footer>
+			<section class="widgets">
+				<article class="widget_links">
+					<h3><span>Services</span></h3>
+					<ul>
+						<li><a href="Statements.aspx">Statements</a></li>
+						<li><a href="CreateRatio.aspx">Ratios</a></li>
+						<li><a href="ObjectCreation.aspx">Knowledge</a></li>
+						<li><a href="AddArticle.aspx">Text</a></li>
+						<li><a href="Analysis.aspx">Analysis</a></li>
+					</ul>
+				</article>
+			</section>
+			<section class="bottom">
+				<p>Corporate Performance Analyzer -- Maximum Effort</p>
+			</section>
+		</footer>
+		<!--End of Footer-->
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/ie.js"></script>
+	<![endif]-->
+</body>
+</html>
+
+
